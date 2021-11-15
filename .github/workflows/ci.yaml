@@ -1,0 +1,30 @@
+name: Deploy static files on GitHub Pages
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Make sure that the public directory exists
+        run: mkdir -p public
+
+      - name: Configure CNAME
+        run: echo respec.zazuko.com > public/CNAME
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: public
