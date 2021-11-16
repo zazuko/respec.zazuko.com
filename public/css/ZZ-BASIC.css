@@ -1,0 +1,7 @@
+/* Style for Netage Basic version */
+
+@import "base.css";
+
+body {
+  background-image: url('https://docs.netage.nl/respec_resources/NETAGE-BASIC.svg');
+}
