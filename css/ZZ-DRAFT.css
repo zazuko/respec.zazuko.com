@@ -1,0 +1,7 @@
+/* Style for Zazuko Draft version */
+
+@import "base.css";
+
+body {
+  background-image: url('https://respec.zazuko.com/images/ZZ-DRAFT.svg');
+}
